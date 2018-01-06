@@ -1,0 +1,85 @@
+.red-test {
+  background-color: red;
+}
+
+.blue {
+	background-color: blue;
+}
+
+.green {
+	background-color: green;
+}
+
+.content-container {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+
+
+.logo {
+	position: absolute;
+	left: 20px;
+	top: 10px;
+	width: 100px;
+	height: 100px;
+}
+
+.download-btn {
+	position: absolute;
+	right: 30px;
+	top: 35px;
+	width: 150px;
+	height: 40px;
+	background-color: #5DBCD2;
+	font-size: 16px;
+	color: #ffffff;
+	text-align: center;
+	font-family: 'Work Sans', sans-serif;
+}
+
+/* 934x739 */
+.screenshot {
+	position: absolute;
+	left: 5vw;
+	top: 150px;
+	width: 50vw;
+	height: 44.3vw;
+}
+
+/*
+.screenshot {
+	position: absolute;
+	left: 20vw;
+	top: 150px;
+	width: 42.16vh;
+	height: 75vh;
+}*/
+
+/*#second-image {
+	opacity: 0;
+}*/
+
+.header {
+	font-size: 60px;
+	position: absolute;
+	/*top: 125px;
+	left: calc(24vw + 42.16vh);*/
+	top: 250px;
+	left: 58vw;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: bold;
+}
+
+.details {
+	color: gray;
+	font-size: 40px;
+	list-style-type: circle;
+	position: absolute;
+	/*top: 125px;
+	left: calc(24vw + 42.16vh);*/
+	top: 350px;
+	left: 58vw;
+	font-family: 'Work Sans', sans-serif;
+}
+
