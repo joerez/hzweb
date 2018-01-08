@@ -33,7 +33,7 @@ body {
   .download-btn-details {
     border-radius: 10px;
     font-size: 18px;
-    padding-left: 20px;
+    padding-left: 25px;
     background-image: url(/images/apple.png);
     background-size: 18px 18px;
     background-position: 16px 14px;
@@ -46,17 +46,16 @@ body {
     width: 96vw;
     height: 67.336vw;
   }
-
   .header-location {
     position: absolute;
-
+    font-size: 45px;
     top: 65.66vh;
     left: 10vw;
   }
 
   .details-location {
     position: absolute;
-
+    font-size: 28px;
     top: 75.266vh;
     left: 10vw;
   }
@@ -100,14 +99,14 @@ body {
 
   .header-location {
     position: absolute;
-
+    font-size: 45px;
     top: 69.66vh;
     left: 10vw;
   }
 
   .details-location {
     position: absolute;
-
+    font-size: 30px;
     top: 79.266vh;
     left: 10vw;
   }
@@ -125,7 +124,7 @@ body {
   }
 }
 
-@media only screen and (min-width:961px) {
+@media only screen and (min-width:1025px) {
   /* big landscape tablets, laptops, and desktops */
   .download-btn-details {
     border-radius: 15px;
@@ -148,14 +147,14 @@ body {
 
   .header-location {
     position: absolute;
-
+    font-size: calc(2.3vw + 2.3vh);
     top: 26.66vh;
     left: 58vw;
   }
 
   .details-location {
     position: absolute;
-
+    font-size: calc(1.53vw + 1.53vh);
     top: 36.266vh;
     left: 58vw;
   }
@@ -176,7 +175,7 @@ body {
 
 .header {
   /*font-size: 60px;*/
-  font-size: calc(2.3vw + 2.3vh);
+
 
   font-family: 'Work Sans', sans-serif;
   font-weight: bold;
@@ -187,7 +186,7 @@ body {
 .details {
   color: gray;
   /*font-size: 40px;*/
-  font-size: calc(1.53vw + 1.53vh);
+  
   font-weight: normal;
   list-style-type: circle;
 
