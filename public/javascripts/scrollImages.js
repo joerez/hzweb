@@ -56,7 +56,7 @@ window.addEventListener('load', function() {
       _('details').fade('in', 200);
 
       //move bottom border and update position
-      move(border, currentLeft, newLeft, 500);
+      move(border, currentLeft, newLeft, 200); //change 500
       currentLeft = newLeft;
       newLeft += 20; //currently 5 slides, so each one is 1/5 of the whole screen
       newLeft = newLeft % 100;
