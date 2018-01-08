@@ -42,21 +42,21 @@ body {
   .screenshot {
     position: absolute;
     left: 2vw;
-    top: 16vh;
+    top: 20vh;
     width: 96vw;
     height: 67.336vw;
   }
   .header-location {
     position: absolute;
-    font-size: 45px;
-    top: 65.66vh;
+    font-size: 38px;
+    top: 62.66vh;
     left: 10vw;
   }
 
   .details-location {
     position: absolute;
-    font-size: 28px;
-    top: 75.266vh;
+    font-size: 20px;
+    top: 72.266vh;
     left: 10vw;
   }
 
