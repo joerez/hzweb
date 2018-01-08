@@ -67,7 +67,7 @@ window.addEventListener('load', function() {
       imageChangeTrack++;
     }
 
-  }, 5000); //5 seconds
+  }, 2000); //5 seconds
 });
 
 ///Animate move element from currentLeft to newLeft over duration milliseconds
