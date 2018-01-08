@@ -20,33 +20,29 @@ body {
 }
 
 .download-btn {
-  /* original
-	width: 150px;
-  height: 40px;
-  */
   background-color: #5DBCD2;
-  /*font-size: 20px;*/
-  font-size: 24px;
   color: #ffffff;
-  padding-left: 25px;
   font-family: 'Work Sans', sans-serif;
   cursor: pointer;
-  border-radius: 15px;
+
   outline: none;
-
-  background-image: url(/images/apple.png);
-  background-size: 25px 25px;
-  background-position: 35px 12px;
-  background-repeat: no-repeat;
 }
-
 
 @media only screen and (min-width:320px) {
   /* smartphones, iPhone, portrait 480x320 phones */
+  .download-btn-details {
+    border-radius: 10px;
+    font-size: 18px;
+    padding-left: 20px;
+    background-image: url(/images/apple.png);
+    background-size: 18px 18px;
+    background-position: 16px 14px;
+    background-repeat: no-repeat;
+  }
   .screenshot {
     position: absolute;
     left: 2vw;
-    top: 14vh;
+    top: 16vh;
     width: 96vw;
     height: 67.336vw;
   }
@@ -54,14 +50,14 @@ body {
   .header-location {
     position: absolute;
 
-    top: 69.66vh;
+    top: 65.66vh;
     left: 10vw;
   }
 
   .details-location {
     position: absolute;
 
-    top: 79.266vh;
+    top: 75.266vh;
     left: 10vw;
   }
 
@@ -69,21 +65,31 @@ body {
     position: absolute;
 
     left: 10vw;
-    top: 90vh;
+    top: 85vh;
 
-    width: 250px;
+    width: 150px;
     /*edited*/
-    height: 55px;
+    height: 50px;
     /*edited*/
   }
 }
 
-@media only screen and (min-width:481px) {
-  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-}
+
+/*@media only screen and (min-width:481px) {
+   portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
+}*/
 
 @media only screen and (min-width:641px) {
   /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .download-btn-details {
+    border-radius: 15px;
+    font-size: 24px;
+    padding-left: 25px;
+    background-image: url(/images/apple.png);
+    background-size: 25px 25px;
+    background-position: 35px 12px;
+    background-repeat: no-repeat;
+  }
   .screenshot {
     position: absolute;
     left: 12vw;
@@ -121,6 +127,16 @@ body {
 
 @media only screen and (min-width:961px) {
   /* big landscape tablets, laptops, and desktops */
+  .download-btn-details {
+    border-radius: 15px;
+    font-size: 24px;
+    padding-left: 25px;
+    background-image: url(/images/apple.png);
+    background-size: 25px 25px;
+    background-position: 35px 12px;
+    background-repeat: no-repeat;
+  }
+
   .screenshot {
     position: absolute;
     left: 5vw;
