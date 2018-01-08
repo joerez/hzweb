@@ -29,10 +29,10 @@ window.addEventListener('load', function() {
       secondImage.src = imageURLForIndex[imageIndex]; //second is still 0 opacity, update image and fade it in
       secondDetails.innerHTML = detailTextForIndex[imageIndex]; //same for detail
 
-      _('image').fade('out', 200); //cross-fade
-      _('details').fade('out', 200);
-      _('second-image').fade('in', 200);
-      _('second-details').fade('in', 200);
+      _('image').fade('out', 400); //cross-fade
+      _('details').fade('out', 400);
+      _('second-image').fade('in', 400);
+      _('second-details').fade('in', 400);
 
       //move bottom border and update position
       move(border, currentLeft, newLeft, 500);
@@ -50,10 +50,10 @@ window.addEventListener('load', function() {
       image.src = imageURLForIndex[imageIndex]; //first is still 0 opacity, update image and fade it in
       details.innerHTML = detailTextForIndex[imageIndex]; //same for detail
 
-      _('second-image').fade('out', 200); //cross-fade
-      _('second-details').fade('out', 200);
-      _('image').fade('in', 200);
-      _('details').fade('in', 200);
+      _('second-image').fade('out', 400); //cross-fade
+      _('second-details').fade('out', 400);
+      _('image').fade('in', 400);
+      _('details').fade('in', 400);
 
       //move bottom border and update position
       move(border, currentLeft, newLeft, 300); //change 500
