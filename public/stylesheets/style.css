@@ -28,6 +28,28 @@ body {
   outline: none;
 }
 
+.contact-btn {
+  background-color: #07575B;
+
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Work Sans', sans-serif;
+  cursor: pointer;
+
+  outline: none;
+
+    	border-radius: 12px;
+    position: absolute;
+    right: 30px;
+
+
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+}
+
+
+
 @media only screen and (min-width:320px) {
   /* smartphones, iPhone, portrait 480x320 phones */
   .download-btn-details {
@@ -71,7 +93,15 @@ body {
     height: 50px;
     /*edited*/
   }
+
+  .contact-btn-details {
+  	top: 40px;
+  }
+
 }
+
+
+
 
 
 /*@media only screen and (min-width:481px) {
@@ -122,6 +152,10 @@ body {
     height: 55px;
     /*edited*/
   }
+
+  .contact-btn-details {
+  	top: 35px;
+  }
 }
 
 @media only screen and (min-width:1025px) {
@@ -170,13 +204,16 @@ body {
     height: 55px;
     /*edited*/
   }
+.contact-btn-details {
+  	top: 30px;
+  }
 }
+
+
 
 
 .header {
   /*font-size: 60px;*/
-
-
   font-family: 'Work Sans', sans-serif;
   font-weight: bold;
 }
@@ -186,7 +223,6 @@ body {
 .details {
   color: gray;
   /*font-size: 40px;*/
-  
   font-weight: normal;
   list-style-type: circle;
 

@@ -30,7 +30,7 @@ window.addEventListener('load', function() {
       secondDetails.innerHTML = detailTextForIndex[imageIndex]; //same for detail
 
       _('image').fade('out', 400); //cross-fade
-      _('details').fade('out', 400);
+      _('details').fade('out', 400); //change this number
       _('second-image').fade('in', 400);
       _('second-details').fade('in', 400);
 
