@@ -23,18 +23,28 @@
 
 <body>
   <div class="container-fluid content-container">
-    <!-- logo, download and contact buttons -->
+    <!-- logo, download and contact buttons (WEB ONLY FOR DOWNLOAD AND CONTACT)-->
     <img class="img-responsive logo" src="/images/hz.png" alt="logo">
     <a href="#">
-      <button class="btn download-btn download-btn-location download-btn-details">download</button>
+      <button id="download-btn" class="btn download-btn download-btn-location download-btn-details">download</button>
     </a>
     <a href="mailto:hzintonation@gmail.com">
-      <button class="btn contact-btn contact-btn-details">contact us</button>
+      <button id="contact-btn" class="btn contact-btn contact-btn-details">contact us</button>
     </a>
 
+    <!-- MOBILE ONLY: images -->
+    <!--
+    <a href="#">
+      <img id="download-image" src="/images/mobile/download.png" class="download-img" alt="download hz">
+    </a>
+    <a href="mailto:hzintonation@gmail.com">
+      <button id="contact-image" src="/images/mobile/envelope.png" class="contact-img" alt="contact hz">
+    </a>
+		-->
+	
     <!-- screenshot and info -->
-    <img id="image" class="img-responsive screenshot" src="/images/web/hzscreen.png" alt="screenshot">
-    <img id="second-image" class="img-responsive screenshot" src="/images/web/hzscreen.png" alt="screenshot">
+    <img id="image" class="screenshot" src="/images/web/hzscreen.png" alt="screenshot">
+    <img id="second-image" class="screenshot" src="/images/web/hzscreen.png" alt="screenshot">
     <h1 id="header" class="header header-location">introducing hz</h1>
     <h1 id="details" class="details details-location">never miss a note again</h1>
     <h1 id="second-details" class="details details-location">never miss a note again</h1>

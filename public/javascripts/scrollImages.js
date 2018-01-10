@@ -24,6 +24,10 @@ window.addEventListener('load', function() {
   var currentLeft = 0; //current position of border (in vw)
   var newLeft = 20; //new position of border (in vw)
 
+  var downloadButton = document.getElementById('download-btn');
+  var contactButton = document.getElementById('contact-btn');
+
+  
 
   if (mobile) {
     imageURLForIndex = ['/images/mobile/hzscreen.png', '/images/mobile/tunerscreen.png',
@@ -31,10 +35,17 @@ window.addEventListener('load', function() {
     ]; //store url depending on index
     image.src = imageURLForIndex[0];
     secondImage.src = imageURLForIndex[0];
+    //remove web-based elements
+    downloadButton.innerHTML = '';
+		contactButton.innerHTML = '';
   } else {
     imageURLForIndex = ['/images/web/hzscreen.png', '/images/web/tunerscreen.png',
       '/images/web/playbackscreen.png', '/images/web/savedscreen.png', '/images/web/calibratescreen.png'
     ]; //store url depending on index
+   //  var downloadImage = document.getElementById('download-image');
+  	// var contactImage = document.getElementById('contact-image');
+   //  downloadImage.parentNode.removeChild(downloadImage);
+   //  contactImage.parentNode.removeChild(contactImage);
   }
 
 
@@ -117,12 +128,14 @@ function _(el) {
 
 ///Fade image in or out over certain duration
 _.prototype.fade = function fade(type, ms) {
+
   var isIn = type === 'in',
     opacity = isIn ? 0 : 1,
     interval = 50,
     duration = ms,
     gap = interval / duration,
     self = this;
+
 
   if (isIn) {
     self.el.style.display = 'inline';
