@@ -38,21 +38,25 @@ body {
 
   outline: none;
 
-    	border-radius: 12px;
-    position: absolute;
-    right: 30px;
-
-
-    width: 120px;
-    height: 40px;
-    font-size: 16px;
+  border-radius: 12px;
+  position: absolute;
 }
 
 
 
 @media only screen and (min-width:320px) {
   /* smartphones, iPhone, portrait 480x320 phones */
+  .logo {
+    position: absolute;
+    left: 40vw;
+    top: 2vh;
+    width: 20vw;
+    height: 20vw;
+  }
+
   .download-btn-details {
+
+
     border-radius: 10px;
     font-size: 18px;
     padding-left: 28px;
@@ -64,41 +68,58 @@ body {
   .screenshot {
     position: absolute;
     left: 2vw;
-    top: 20vh;
-    width: 96vw;
-    height: 67.336vw;
+    top: 25vh;
+    width: 35vw;
+    height: 71.21vw;
   }
   .header-location {
     position: absolute;
     font-size: 38px;
-    top: 62.66vh;
-    left: 10vw;
+    top: 42.66vh;
+    left: 40vw;
   }
 
   .details-location {
     position: absolute;
     font-size: 20px;
-    top: 73.266vh;
-    left: 10vw;
+    top: 50vh;
+    left: 40vw;
   }
 
   .download-btn-location {
     position: absolute;
 
+    left: 5vw;
+
+
+    width: 20vw;
+    height: 5vh;
+    font-size: 16px;
+    top: 2vh;
+
+    /*
+
     left: 10vw;
     top: 85vh;
 
     width: 150px;
-    /*edited*/
-    height: 50px;
-    /*edited*/
+
+    height: 50px;*/
   }
 
   .contact-btn-details {
-  	top: 40px;
-  }
+    right: 5vw;
 
+
+    width: 20vw;
+    height: 5vh;
+    font-size: 16px;
+    top: 2vh;
+  }
 }
+
+
+
 
 
 
@@ -154,7 +175,13 @@ body {
   }
 
   .contact-btn-details {
-  	top: 35px;
+    right: 30px;
+
+
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+    top: 35px;
   }
 }
 
@@ -204,8 +231,14 @@ body {
     height: 55px;
     /*edited*/
   }
-.contact-btn-details {
-  	top: 30px;
+  .contact-btn-details {
+    top: 30px;
+    right: 30px;
+
+
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
   }
 }
 
