@@ -1,9 +1,11 @@
+var imageURLForIndex;
+
 window.addEventListener('load', function() {
 
-  var imageURLForIndex;
+  
   var mobile = checkMobile();
 
-  
+
 
   var detailTextForIndex = ['never miss a note again', 'learn from real-time tuning...', '...or view past performances',
     'keep recordings forever', 'tune relative to your instrument'
@@ -27,9 +29,11 @@ window.addEventListener('load', function() {
   var downloadButton = document.getElementById('download-btn');
   var contactButton = document.getElementById('contact-btn');
 
-  
 
-  if (mobile) {
+
+  // if (mobile) {
+  var width = screenWidth();
+  if (width <= 640) {
     imageURLForIndex = ['/images/mobile/hzscreen.png', '/images/mobile/tunerscreen.png',
       '/images/mobile/playbackscreen.png', '/images/mobile/savedscreen.png', '/images/mobile/calibratescreen.png'
     ]; //store url depending on index
@@ -37,17 +41,23 @@ window.addEventListener('load', function() {
     secondImage.src = imageURLForIndex[0];
     //remove web-based elements
     downloadButton.innerHTML = '';
-		contactButton.innerHTML = '';
+    contactButton.innerHTML = '';
   } else {
     imageURLForIndex = ['/images/web/hzscreen.png', '/images/web/tunerscreen.png',
       '/images/web/playbackscreen.png', '/images/web/savedscreen.png', '/images/web/calibratescreen.png'
-    ]; //store url depending on index
-   //  var downloadImage = document.getElementById('download-image');
-  	// var contactImage = document.getElementById('contact-image');
-   //  downloadImage.parentNode.removeChild(downloadImage);
-   //  contactImage.parentNode.removeChild(contactImage);
-  }
+    ];
 
+    image.src = imageURLForIndex[0];
+    secondImage.src = imageURLForIndex[0];
+    //remove web-based elements
+    downloadButton.innerHTML = 'download';
+    contactButton.innerHTML = 'contact us';
+     //store url depending on index
+    //  var downloadImage = document.getElementById('download-image');
+    // var contactImage = document.getElementById('contact-image');
+    //  downloadImage.parentNode.removeChild(downloadImage);
+    //  contactImage.parentNode.removeChild(contactImage);
+  }
 
   setInterval(function() {
     // method to be executed;
@@ -97,6 +107,42 @@ window.addEventListener('load', function() {
   }, 3000); //4 seconds
 });
 
+window.addEventListener('resize', function() {
+
+	var image = document.getElementById('image'); // two images are used to cross-fade (fade one out and the other in) for animation
+  var secondImage = document.getElementById('second-image');
+
+  var downloadButton = document.getElementById('download-btn');
+  var contactButton = document.getElementById('contact-btn');
+
+  var width = screenWidth();
+  if (width <= 640) {
+    imageURLForIndex = ['/images/mobile/hzscreen.png', '/images/mobile/tunerscreen.png',
+      '/images/mobile/playbackscreen.png', '/images/mobile/savedscreen.png', '/images/mobile/calibratescreen.png'
+    ]; //store url depending on index
+    image.src = imageURLForIndex[0];
+    secondImage.src = imageURLForIndex[0];
+    //remove web-based elements
+    downloadButton.innerHTML = '';
+    contactButton.innerHTML = '';
+  } else {
+    imageURLForIndex = ['/images/web/hzscreen.png', '/images/web/tunerscreen.png',
+      '/images/web/playbackscreen.png', '/images/web/savedscreen.png', '/images/web/calibratescreen.png'
+    ];
+
+    image.src = imageURLForIndex[0];
+    secondImage.src = imageURLForIndex[0];
+    //remove web-based elements
+    downloadButton.innerHTML = 'download';
+    contactButton.innerHTML = 'contact us';
+     //store url depending on index
+    //  var downloadImage = document.getElementById('download-image');
+    // var contactImage = document.getElementById('contact-image');
+    //  downloadImage.parentNode.removeChild(downloadImage);
+    //  contactImage.parentNode.removeChild(contactImage);
+  }
+});
+
 ///Animate move element from currentLeft to newLeft over duration milliseconds
 function move(elem, currentLeft, newLeft, duration) {
   var left = currentLeft;
@@ -109,6 +155,17 @@ function move(elem, currentLeft, newLeft, duration) {
       clearInterval(id);
   }
   var id = setInterval(frame, refreshRate); // draw every 10ms
+}
+
+function screenWidth() {
+  var w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName('body')[0],
+    x = w.innerWidth || e.clientWidth || g.clientWidth;
+
+  return x;
+
 }
 
 ///check for mobile
