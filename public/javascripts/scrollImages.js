@@ -30,6 +30,7 @@ window.addEventListener('load', function() {
   var contactButton = document.getElementById('contact-btn');
 
 
+  var header = document.getElementById('header');
 
   // if (mobile) {
   var width = screenWidth();
@@ -65,9 +66,39 @@ window.addEventListener('load', function() {
     downloadButton.innerHTML = 'download';
     contactButton.innerHTML = 'contact us';
 
-    downloadButton.style.left = '';
+    downloadButton.style.left = 'auto';
     downloadButton.style.right = 30 + 'px';
     downloadButton.style.top = 76 + 'px';
+
+.header-location {
+    text-align: left;
+    position: absolute;
+    font-size: calc(2.3vw + 2.3vh);
+    top: 26.66vh;
+    left: 58vw;
+  }
+
+  .details-location {
+    text-align: left;
+    position: absolute;
+    font-size: calc(1.53vw + 1.53vh);
+    top: 36.266vh;
+    left: 58vw;
+  }
+
+  	header.style.fontSize = '30px';
+  	header.style.left = '90vh';
+  	header.style.top = '26.66vh';
+
+
+  	details.style.fontSize = '24px';
+  	details.style.left = '90vh';
+  	details.style.top = '34vh';
+
+  	secondDetails.style.fontSize = '24px';
+  	secondDetails.style.left = '90vh';
+  	secondDetails.style.top = '34vh';
+
 
 
   } else {
