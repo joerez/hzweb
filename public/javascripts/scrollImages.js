@@ -70,22 +70,6 @@ window.addEventListener('load', function() {
     downloadButton.style.right = 30 + 'px';
     downloadButton.style.top = 76 + 'px';
 
-.header-location {
-    text-align: left;
-    position: absolute;
-    font-size: calc(2.3vw + 2.3vh);
-    top: 26.66vh;
-    left: 58vw;
-  }
-
-  .details-location {
-    text-align: left;
-    position: absolute;
-    font-size: calc(1.53vw + 1.53vh);
-    top: 36.266vh;
-    left: 58vw;
-  }
-
   	header.style.fontSize = '30px';
   	header.style.left = '90vh';
   	header.style.top = '26.66vh';
