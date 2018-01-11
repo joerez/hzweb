@@ -42,6 +42,34 @@ window.addEventListener('load', function() {
     //remove web-based elements
     downloadButton.innerHTML = '';
     contactButton.innerHTML = '';
+  } else if (mobile) {
+		imageURLForIndex = ['/images/web/hzscreen.png', '/images/web/tunerscreen.png',
+      '/images/web/playbackscreen.png', '/images/web/savedscreen.png', '/images/web/calibratescreen.png'
+    ];
+
+    image.src = imageURLForIndex[0];
+    secondImage.src = imageURLForIndex[0];
+
+    image.style.left = 12 + 'vh';
+    image.style.top = 14 + 'vw';
+    image.style.width = 76 + 'vh';
+    image.style.height = 67.336 + 'vh';
+
+    secondImage.style.left = 12 + 'vh';
+    secondImage.style.top = 14 + 'vw';
+    secondImage.style.width = 76 + 'vh';
+    secondImage.style.height = 67.336 + 'vh';
+
+
+    //remove web-based elements
+    downloadButton.innerHTML = 'download';
+    contactButton.innerHTML = 'contact us';
+
+    downloadButton.style.left = '';
+    downloadButton.style.right = 30 + 'px';
+    downloadButton.style.top = 76 + 'px';
+
+
   } else {
     imageURLForIndex = ['/images/web/hzscreen.png', '/images/web/tunerscreen.png',
       '/images/web/playbackscreen.png', '/images/web/savedscreen.png', '/images/web/calibratescreen.png'
@@ -52,12 +80,9 @@ window.addEventListener('load', function() {
     //remove web-based elements
     downloadButton.innerHTML = 'download';
     contactButton.innerHTML = 'contact us';
-     //store url depending on index
-    //  var downloadImage = document.getElementById('download-image');
-    // var contactImage = document.getElementById('contact-image');
-    //  downloadImage.parentNode.removeChild(downloadImage);
-    //  contactImage.parentNode.removeChild(contactImage);
   }
+
+
 
   setInterval(function() {
     // method to be executed;
