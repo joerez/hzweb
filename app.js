@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var http = require('http');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -31,6 +32,10 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
+
+setInterval(function() {
+    http.get('https://hzintonation.herokuapp.com/');
+}, 300000); // every 5 minutes (300000)
 
 // error handler
 app.use(function(err, req, res, next) {
