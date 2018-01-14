@@ -34,7 +34,7 @@ app.use(function(req, res, next) {
 });
 
 setInterval(function() {
-    http.get('https://hzintonation.herokuapp.com/');
+    http.get('http://hzintonation.herokuapp.com/');
 }, 300000); // every 5 minutes (300000)
 
 // error handler
