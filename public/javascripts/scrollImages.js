@@ -8,7 +8,7 @@ window.addEventListener('load', function() {
 
 
   var detailTextForIndex = ['never miss a note again', 'learn from real-time tuning...', '...or view past performances',
-    'keep recordings forever', 'tune relative to your instrument'
+    'keep recordings forever', 'customize your settings'
   ];
 
   var imageIndex = 1; //start at 1 because image is already set to first
@@ -36,7 +36,7 @@ window.addEventListener('load', function() {
   var width = screenWidth();
   if (width <= 640) {
     imageURLForIndex = ['/images/mobile/hzscreen.png', '/images/mobile/tunerscreen.png',
-      '/images/mobile/playbackscreen.png', '/images/mobile/savedscreen.png', '/images/mobile/calibratescreen.png'
+      '/images/mobile/playbackscreen.png', '/images/mobile/savedscreen.png', '/images/mobile/settingscreen.png'
     ]; //store url depending on index
     image.src = imageURLForIndex[0];
     secondImage.src = imageURLForIndex[0];
@@ -45,7 +45,7 @@ window.addEventListener('load', function() {
     contactButton.innerHTML = '';
   } else if (mobile) {
 		imageURLForIndex = ['/images/web/hzscreen.png', '/images/web/tunerscreen.png',
-      '/images/web/playbackscreen.png', '/images/web/savedscreen.png', '/images/web/calibratescreen.png'
+      '/images/web/playbackscreen.png', '/images/web/savedscreen.png', '/images/web/settingscreen.png'
     ];
 
     image.src = imageURLForIndex[0];
@@ -87,7 +87,7 @@ window.addEventListener('load', function() {
 
   } else {
     imageURLForIndex = ['/images/web/hzscreen.png', '/images/web/tunerscreen.png',
-      '/images/web/playbackscreen.png', '/images/web/savedscreen.png', '/images/web/calibratescreen.png'
+      '/images/web/playbackscreen.png', '/images/web/savedscreen.png', '/images/web/settingscreen.png'
     ];
 
     image.src = imageURLForIndex[0];
@@ -158,7 +158,7 @@ window.addEventListener('resize', function() {
   var width = screenWidth();
   if (width <= 640) {
     imageURLForIndex = ['/images/mobile/hzscreen.png', '/images/mobile/tunerscreen.png',
-      '/images/mobile/playbackscreen.png', '/images/mobile/savedscreen.png', '/images/mobile/calibratescreen.png'
+      '/images/mobile/playbackscreen.png', '/images/mobile/savedscreen.png', '/images/mobile/settingscreen.png'
     ]; //store url depending on index
     image.src = imageURLForIndex[0];
     secondImage.src = imageURLForIndex[0];
@@ -167,7 +167,7 @@ window.addEventListener('resize', function() {
     contactButton.innerHTML = '';
   } else {
     imageURLForIndex = ['/images/web/hzscreen.png', '/images/web/tunerscreen.png',
-      '/images/web/playbackscreen.png', '/images/web/savedscreen.png', '/images/web/calibratescreen.png'
+      '/images/web/playbackscreen.png', '/images/web/savedscreen.png', '/images/web/settingscreen.png'
     ];
 
     image.src = imageURLForIndex[0];
