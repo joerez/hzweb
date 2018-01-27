@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
   <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
   <script src="/javascripts/scrollImages.js"></script>
-
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
@@ -23,7 +22,6 @@
 
 <body>
   <div class="container-fluid content-container">
-
     <!-- logo, download and contact buttons (WEB ONLY FOR DOWNLOAD AND CONTACT)-->
     <img class="img-responsive logo" src="/images/hz.png" alt="logo">
     <a href="https://itunes.apple.com/app/id1335531057" target="_blank">
@@ -32,7 +30,6 @@
     <a href="mailto:hzintonation@gmail.com">
       <button id="contact-btn" class="btn contact-btn contact-btn-details">contact us</button>
     </a>
-	
     <!-- screenshot and info -->
     <img id="image" class="screenshot" src="/images/web/hzscreen.png" alt="screenshot">
     <img id="second-image" class="screenshot" src="/images/web/hzscreen.png" alt="screenshot">
@@ -42,6 +39,37 @@
     <!-- bottom bar -->
     <div id="base" class="bottom-base"></div>
     <div id="border" class="bottom-border"></div>
+  </div>
+  <div class="hidden">
+    <script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+    var images = new Array()
+
+    function preload() {
+      for (i = 0; i < preload.arguments.length; i++) {
+        images[i] = new Image()
+        images[i].src = preload.arguments[i]
+      }
+    }
+    var mobilePreload = [
+      'http://www.hzintonation.com/images/mobile/hzscreen.png',
+      'http://www.hzintonation.com/images/mobile/tunerscreen.png',
+      'http://www.hzintonation.com/images/mobile/playbackscreen.png',
+      'http://www.hzintonation.com/images/mobile/savedscreen.png',
+      'http://www.hzintonation.com/images/mobile/settingscreen.png'
+    ];
+    var webPreload = [
+      'http://www.hzintonation.com/images/web/hzscreen.png',
+      'http://www.hzintonation.com/images/web/tunerscreen.png',
+      'http://www.hzintonation.com/images/web/playbackscreen.png',
+      'http://www.hzintonation.com/images/web/savedscreen.png',
+      'http://www.hzintonation.com/images/web/settingscreen.png'
+    ]; //
+    //preload('http://www.hzintonation.com/images/web/hzscreen.png');
+    // preload(mobilePreload[0], mobilePreload[1], mobilePreload[2]);
+    // preload(webPreload[0], webPreload[1]);
+    //--><!]]>
+    </script>
   </div>
 </body>
 

@@ -14,7 +14,7 @@ var webPreload = [
 'http://www.hzintonation.com/images/web/savedscreen.png', 
 'http://www.hzintonation.com/images/web/settingscreen.png'
 ]; //
-//http://www.hzintonation.com/images/web/tunerscreen.png
+//http://www.hzintonation.comhttp://www.hzintonation.com/images/web/tunerscreen.png
 
 window.addEventListener('load', function() {
 
@@ -51,11 +51,11 @@ window.addEventListener('load', function() {
 	  // if (mobile) {
   var width = screenWidth();
   if (width <= 640) { //using mobile images
-    imageURLForIndex = ['/images/mobile/hzscreen.png', '/images/mobile/tunerscreen.png',
-      '/images/mobile/playbackscreen.png', '/images/mobile/savedscreen.png', '/images/mobile/settingscreen.png'
+    imageURLForIndex = ['http://www.hzintonation.com/images/mobile/hzscreen.png', 'http://www.hzintonation.com/images/mobile/tunerscreen.png',
+      'http://www.hzintonation.com/images/mobile/playbackscreen.png', 'http://www.hzintonation.com/images/mobile/savedscreen.png', 'http://www.hzintonation.com/images/mobile/settingscreen.png'
     ]; //store url depending on index
 
-    preload(mobilePreload);
+    preloadMobile();
 
     image.src = imageURLForIndex[0];
     secondImage.src = imageURLForIndex[0];
@@ -63,10 +63,10 @@ window.addEventListener('load', function() {
     downloadButton.innerHTML = '';
     contactButton.innerHTML = '';
   } else if (mobile) { //using web images but altered
-		imageURLForIndex = ['/images/web/hzscreen.png', '/images/web/tunerscreen.png',
-      '/images/web/playbackscreen.png', '/images/web/savedscreen.png', '/images/web/settingscreen.png'
+		imageURLForIndex = ['http://www.hzintonation.com/images/web/hzscreen.png', 'http://www.hzintonation.com/images/web/tunerscreen.png',
+      'http://www.hzintonation.com/images/web/playbackscreen.png', 'http://www.hzintonation.com/images/web/savedscreen.png', 'http://www.hzintonation.com/images/web/settingscreen.png'
     ];
-    preload(webPreload);
+    preloadWeb();
 
     image.src = imageURLForIndex[0];
     secondImage.src = imageURLForIndex[0];
@@ -106,10 +106,10 @@ window.addEventListener('load', function() {
 
 
   } else {
-    imageURLForIndex = ['/images/web/hzscreen.png', '/images/web/tunerscreen.png',
-      '/images/web/playbackscreen.png', '/images/web/savedscreen.png', '/images/web/settingscreen.png'
+    imageURLForIndex = ['http://www.hzintonation.com/images/web/hzscreen.png', 'http://www.hzintonation.com/images/web/tunerscreen.png',
+      'http://www.hzintonation.com/images/web/playbackscreen.png', 'http://www.hzintonation.com/images/web/savedscreen.png', 'http://www.hzintonation.com/images/web/settingscreen.png'
     ];
-    preload(webPreload);
+    preloadWeb();
 
     image.src = imageURLForIndex[0];
     secondImage.src = imageURLForIndex[0];
@@ -178,20 +178,20 @@ window.addEventListener('resize', function() {
 
   var width = screenWidth();
   if (width <= 640) {
-    imageURLForIndex = ['/images/mobile/hzscreen.png', '/images/mobile/tunerscreen.png',
-      '/images/mobile/playbackscreen.png', '/images/mobile/savedscreen.png', '/images/mobile/settingscreen.png'
+    imageURLForIndex = ['http://www.hzintonation.com/images/mobile/hzscreen.png', 'http://www.hzintonation.com/images/mobile/tunerscreen.png',
+      'http://www.hzintonation.com/images/mobile/playbackscreen.png', 'http://www.hzintonation.com/images/mobile/savedscreen.png', 'http://www.hzintonation.com/images/mobile/settingscreen.png'
     ]; //store url depending on index
-    preload(mobilePreload);
+    preloadMobile();
     image.src = imageURLForIndex[0];
     secondImage.src = imageURLForIndex[0];
     //remove web-based elements
     downloadButton.innerHTML = '';
     contactButton.innerHTML = '';
   } else {
-    imageURLForIndex = ['/images/web/hzscreen.png', '/images/web/tunerscreen.png',
-      '/images/web/playbackscreen.png', '/images/web/savedscreen.png', '/images/web/settingscreen.png'
+    imageURLForIndex = ['http://www.hzintonation.com/images/web/hzscreen.png', 'http://www.hzintonation.com/images/web/tunerscreen.png',
+      'http://www.hzintonation.com/images/web/playbackscreen.png', 'http://www.hzintonation.com/images/web/savedscreen.png', 'http://www.hzintonation.com/images/web/settingscreen.png'
     ];
-    preload(webPreload);
+    preloadWeb();
 
     image.src = imageURLForIndex[0];
     secondImage.src = imageURLForIndex[0];
@@ -239,13 +239,20 @@ function checkMobile() {
   return check;
 };
 
-///preload images
-function preload() {
-  for (var i = 0; i < arguments.length; i++) {
+function preloadMobile() {
+	for (var i = 0; i < mobilePreload.length; i++) {
     images[i] = new Image();
-    images[i].src = preload.arguments[i];
+    images[i].src = mobilePreload[i];
   }
 }
+
+function preloadWeb() {
+	for (var i = 0; i < webPreload.length; i++) {
+    images[i] = new Image();
+    images[i].src = webPreload[i];
+  }
+}
+
 
 ///helper function for fade
 function _(el) {
