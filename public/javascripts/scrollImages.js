@@ -32,21 +32,33 @@ window.addEventListener('load', function() {
 
   var header = document.getElementById('header');
 
-  // if (mobile) {
+  var images = [];
+	function preload() {
+	  for (var i = 0; i < arguments.length; i++) {
+	    images[i] = new Image();
+	    images[i].src = preload.arguments[i];
+	  }
+	}
+
+	  // if (mobile) {
   var width = screenWidth();
-  if (width <= 640) {
+  if (width <= 640) { //using mobile images
     imageURLForIndex = ['/images/mobile/hzscreen.png', '/images/mobile/tunerscreen.png',
       '/images/mobile/playbackscreen.png', '/images/mobile/savedscreen.png', '/images/mobile/settingscreen.png'
     ]; //store url depending on index
+
+    preload(imageURLForIndex);
+
     image.src = imageURLForIndex[0];
     secondImage.src = imageURLForIndex[0];
     //remove web-based elements
     downloadButton.innerHTML = '';
     contactButton.innerHTML = '';
-  } else if (mobile) {
+  } else if (mobile) { //using web images but altered
 		imageURLForIndex = ['/images/web/hzscreen.png', '/images/web/tunerscreen.png',
       '/images/web/playbackscreen.png', '/images/web/savedscreen.png', '/images/web/settingscreen.png'
     ];
+    preload(imageURLForIndex);
 
     image.src = imageURLForIndex[0];
     secondImage.src = imageURLForIndex[0];
@@ -89,6 +101,7 @@ window.addEventListener('load', function() {
     imageURLForIndex = ['/images/web/hzscreen.png', '/images/web/tunerscreen.png',
       '/images/web/playbackscreen.png', '/images/web/savedscreen.png', '/images/web/settingscreen.png'
     ];
+    preload(imageURLForIndex);
 
     image.src = imageURLForIndex[0];
     secondImage.src = imageURLForIndex[0];
@@ -160,6 +173,7 @@ window.addEventListener('resize', function() {
     imageURLForIndex = ['/images/mobile/hzscreen.png', '/images/mobile/tunerscreen.png',
       '/images/mobile/playbackscreen.png', '/images/mobile/savedscreen.png', '/images/mobile/settingscreen.png'
     ]; //store url depending on index
+    preload(imageURLForIndex);
     image.src = imageURLForIndex[0];
     secondImage.src = imageURLForIndex[0];
     //remove web-based elements
@@ -169,6 +183,7 @@ window.addEventListener('resize', function() {
     imageURLForIndex = ['/images/web/hzscreen.png', '/images/web/tunerscreen.png',
       '/images/web/playbackscreen.png', '/images/web/savedscreen.png', '/images/web/settingscreen.png'
     ];
+    preload(imageURLForIndex);
 
     image.src = imageURLForIndex[0];
     secondImage.src = imageURLForIndex[0];
@@ -207,6 +222,7 @@ function screenWidth() {
   return x;
 
 }
+
 
 ///check for mobile
 function checkMobile() {
